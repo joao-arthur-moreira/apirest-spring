@@ -1,9 +1,17 @@
 package com.rest.api.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Produto {
 	
+	@Id
 	private Long codigo;
 	private String nome;
+	
+	@Column(name="codigo_barras")
 	private String codigoBarras;
 	
 	public Long getCodigo() {
